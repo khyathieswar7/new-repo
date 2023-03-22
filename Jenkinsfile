@@ -5,8 +5,8 @@ pipeline {
         stage('docker') {
             steps {
                 sh '''
-                docker build -t apache:1 .
-                docker run -d -p 1000:80 apache:1 '''
+               sudo docker build -t apache:1 .
+               sudo docker run -d -p 1000:80 apache:1 '''
             }
         }
     }
